@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./AIServiceCard.module.css";
 import { FaChartBar, FaTools, FaBullhorn } from "react-icons/fa";
+import Link from "next/link"; // Import Link from Next.js
 
 const AIServiceCard: React.FC = () => {
   return (
@@ -22,18 +23,38 @@ const AIServiceCard: React.FC = () => {
 
       {/* Right Section: Cards */}
       <div className={styles.cardsSection}>
-        <div className={styles.card}>
-          <FaChartBar className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Digital Transformation</h3>
-        </div>
-        <div className={styles.card}>
-          <FaTools className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Enterprise Solutions</h3>
-        </div>
-        <div className={styles.card}>
-          <FaBullhorn className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Digital Marketing</h3>
-        </div>
+        {/* Card 1: Digital Transformation */}
+        <Link href="/digitalTransformation">
+          <div className={styles.card}>
+            <FaChartBar className={styles.cardIcon} />
+            <h3 className={styles.cardTitle}>Digital Transformation</h3>
+            <p className={styles.cardDescription}>
+              Transform your business digitally for a competitive edge in the market.
+            </p>
+          </div>
+        </Link>
+
+        {/* Card 2: Enterprise Solutions */}
+        <Link href="/enterpriseSolutions">
+          <div className={styles.card}>
+            <FaTools className={styles.cardIcon} />
+            <h3 className={styles.cardTitle}>Enterprise Solutions</h3>
+            <p className={styles.cardDescription}>
+              Streamline your business operations with tailored enterprise solutions.
+            </p>
+          </div>
+        </Link>
+
+        {/* Card 3: Digital Marketing */}
+        <Link href="/digitalMarketing">
+          <div className={styles.card}>
+            <FaBullhorn className={styles.cardIcon} />
+            <h3 className={styles.cardTitle}>Digital Marketing</h3>
+            <p className={styles.cardDescription}>
+              Enhance your brand visibility and reach through digital marketing strategies.
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );

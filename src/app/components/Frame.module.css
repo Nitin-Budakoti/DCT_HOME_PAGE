@@ -1,7 +1,7 @@
 .frameContainer {
   width: 100%;
   max-width: 1524px;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto;
   padding: 0 2rem;
   background: rgba(3, 7, 28, 1);
   display: flex;
@@ -12,12 +12,12 @@
 .aboutSection {
   margin-top: 80px;
   margin-left: 0px;
-  text-align: left; /* Align text to the left */
+  text-align: left;
   color: white;
   display: flex;
-  align-items: flex-start; /* Align items vertically at the top */
-  justify-content: flex-start; /* Align items horizontally to the left */
-  gap: 30px; /* Space between image and text */
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
 }
 
 .aboutImageContainer {
@@ -26,15 +26,15 @@
 }
 
 .aboutImage {
-  width: 250px; /* Adjust the width as needed */
+  width: 250px;
   height: auto;
-  border-radius: 10px; /* Optional: for rounded corners */
+  border-radius: 10px;
 }
 
 .aboutTextContainer {
   max-width: 800px;
-  justify-content: flex-start; /* Align content to the start */
-  text-align: left; /* Align text to the left */
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .aboutTitle {
@@ -48,14 +48,14 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 2rem; /* Increased bottom margin for spacing */
+  margin-bottom: 2rem;
 }
 
 .aboutText {
   font-size: 1rem;
   line-height: 1.8;
   color: #eaeaea;
-  margin-bottom: 2rem; /* Added bottom margin for better spacing */
+  margin-bottom: 2rem;
 }
 
 .learnMoreButton {
@@ -87,7 +87,7 @@
 .servicesContainer,
 .portfolioContainer,
 .differentiatorsContainer {
-  margin-top: 4rem; /* Increased margin for better separation */
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -101,7 +101,7 @@
   border-radius: 10px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cardIcon {
@@ -117,24 +117,33 @@
 .cardSubtitle {
   font-size: 1rem;
   color: #cccccc;
-  margin-top: 1rem; /* Added margin for better spacing in cards */
+  margin-top: 1rem;
 }
 
 .sectionSpacing {
-  margin-bottom: 5rem; /* Extra spacing between major sections */
+  margin-bottom: 5rem;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .aboutSection {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align text to the left */
-    text-align: left; /* Ensure text remains left-aligned */
-    gap: 20px; /* Reduce gap on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
 
   .aboutImage {
-    width: 150px; /* Smaller image size for mobile */
+    width: 180px; /* Reduced image size for mobile */
+  }
+
+  .aboutTextContainer {
+    max-width: 90%;
+  }
+
+  .learnMoreButton {
+    width: 100%;
+    padding: 1rem 0;
   }
 
   .servicesContainer,

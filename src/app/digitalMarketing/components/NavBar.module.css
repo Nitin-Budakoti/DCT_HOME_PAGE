@@ -1,0 +1,127 @@
+/* Main Navbar container */
+.navbar {
+  top: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Full width */
+  height: 56px;
+  padding: 0 1rem;
+  border-radius: 30px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative; /* Adjusted for positioning */
+}
+
+/* Logo style */
+.logo {
+  font-size: 2rem;
+  color: #6e38f5; /* Purple color for the logo */
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+/* Navbar links container */
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: hsl(0, 0%, 50%);
+  width: 100%; /* Set the width to 100% */
+  max-width: 1250px; /* Limit max width to 1250px for larger screens */
+  height: 56px;
+  list-style: none;
+  padding: 0;
+  border-radius: 30px;
+  gap: 2rem;
+  position: absolute; /* Make it fixed at top */
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/* Navbar link style */
+.navLinks li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Hover effect for navbar links */
+.navLinks li a:hover {
+  opacity: 0.8;
+}
+
+/* Contact Us button style */
+.contactUs a {
+  padding: 0.5rem 1.5rem;
+  background-color: #9c47ff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.contactUs a:hover {
+  background-color: #6e38f5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 0.5rem;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    transform: rotate(0deg); /* Reset rotation for smaller screens */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack the navbar links vertically */
+    gap: 1rem;
+    width: 100%; /* Full width for mobile */
+    position: static; /* Make navbar position static */
+    margin-top: 10px; /* Add spacing from the top */
+    padding: 0;
+  }
+
+  .navLinks li {
+    width: 100%; /* Make each link take full width */
+    text-align: center; /* Center the links */
+  }
+
+  .navLinks li a {
+    font-size: 1rem;
+    padding: 1rem; /* Add padding to make links easier to click */
+  }
+
+  .contactUs a {
+    padding: 0.5rem 1rem; /* Smaller button padding for mobile */
+    margin-top: 1rem; /* Add space between the navbar and the button */
+  }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.25rem; /* Reduce logo size on very small screens */
+  }
+
+  .navLinks {
+    gap: 0.5rem; /* Reduce gap between links */
+  }
+
+  .navLinks li a {
+    font-size: 0.9rem; /* Make font smaller for tiny screens */
+    padding: 0.8rem; /* Adjust padding */
+  }
+
+  .contactUs a {
+    padding: 0.5rem 0.8rem; /* Reduce padding for very small screens */
+  }
+}

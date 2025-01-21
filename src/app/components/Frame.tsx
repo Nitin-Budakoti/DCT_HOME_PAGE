@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Frame.module.css';
-import IMAGE from "next/image";
-import RocketImage from "../../../public/rocket.png";
-
+import Image from 'next/image';
 
 const Frame = () => {
   return (
@@ -10,11 +8,13 @@ const Frame = () => {
       {/* About Us Section */}
       <section className={styles.aboutSection}>
         <div className={styles.aboutImageContainer}>
-          <IMAGE
-            src={RocketImage}
-            alt="Zenoheal Image" 
-            className={styles.aboutImage} 
-          />
+        <Image 
+  src="/rocket.png"  // The `public/` folder is omitted in the path
+  alt="Zenoheal Image" 
+  className={styles.aboutImage} 
+  width={500}          // Provide appropriate width
+  height={300}         // Provide appropriate height
+/>
         </div>
         <div className={styles.aboutTextContainer}>
           <h2 className={styles.aboutTitle}>About Us</h2>
@@ -28,12 +28,18 @@ const Frame = () => {
         </div>
       </section>
 
-   
+      {/* Additional Sections */}
+      <section className={styles.servicesContainer}>
+        {/* Cards for services */}
+      </section>
 
-    
+      <section className={styles.portfolioContainer}>
+        {/* Portfolio Items */}
+      </section>
 
-      
-      
+      <section className={styles.differentiatorsContainer}>
+        {/* Differentiators */}
+      </section>
     </div>
   );
 };

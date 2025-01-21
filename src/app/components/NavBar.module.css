@@ -1,40 +1,35 @@
+/* Default Navbar Styling */
 .navbar {
   top: 67px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; /* Changed to full width */
+  width: 100%;
   height: 56px;
   padding: 0 1rem;
-  
-  /* Adjust to match your gray */
-  border-radius: 30px; /* Rounded corners */
+  border-radius: 30px;
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 20px;
-  
-
+  background-color: transparent;
 }
 
 .logo {
   font-size: 2rem;
-  color: #6e38f5; /* Purple color for the logo */
-  display: inline-block; /* Ensures transform works properly */
-  transform: rotate(-45deg); /* Rotates the element by 45 degrees */
+  color: #6e38f5;
+  display: inline-block;
+  transform: rotate(-45deg);
 }
 
-
 .navLinks {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: hsl(0, 0%, 50%);
-  width: 1250px;
+  background-color: hsl(0, 0%, 50%); /* Gray background */
+  width: 100%;
+  max-width: 1250px;
   height: 56px;
-  top: 67px;
-  left: 445px;
-  display: flex;
-  gap: 2rem;
+  gap: 2rem; /* Increased gap for better spacing */
   list-style: none;
   padding: 0;
   border-radius: 30px;
@@ -63,4 +58,50 @@
 
 .contactUs a:hover {
   background-color: #6e38f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 1rem;
+    height: auto; /* Adjusted height for mobile */
+    margin-top: 10px; /* Adjusted margin */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for better spacing */
+    background-color: hsl(0, 0%, 50%); /* Keep gray background */
+    width: 100%;
+    padding: 0.5rem;
+    display: flex; /* Ensure links are shown */
+    align-items: center; /* Center align items */
+    border-radius: 30px;
+  }
+
+  .contactUs {
+    margin-top: 1rem; /* Ensure spacing from nav links */
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    display: flex; /* Ensure links are visible */
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%; /* Ensure full width */
+  }
+
+  .navbar.active .navLinks {
+    display: flex; /* Keep nav visible when active */
+  }
+
+  .hamburger {
+    display: block; /* Ensure hamburger is visible */
+  }
 }

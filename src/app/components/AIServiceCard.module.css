@@ -1,109 +1,177 @@
 /* Main Container */
 .serviceContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(3, 7, 28, 1);
-    padding: 50px 20px;
-    color: white;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    margin-left: 70px;
-    margin-right:70px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(3, 7, 28, 1);
+  padding: 50px 20px;
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Left Section: Text */
+.textSection {
+  max-width: 500px;
+  text-align: left;
+}
+
+.sectionTitle {
+  color: #a070ff;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.sectionSubtitle .highlight {
+  color: #a070ff;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.learnMoreButton {
+  background-color: #a070ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learnMoreButton:hover {
+  background-color: #8a5be3;
+  transform: translateY(-3px);
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+/* Right Section: Cards */
+.cardsSection {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures cards adjust on smaller screens */
+}
+
+.card {
+  background-color: #1e1b3a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 220px; /* Fixed card width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cardIcon {
+  font-size: 50px;
+  color: #a070ff;
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .serviceContainer {
+      padding: 30px 10px;
+      margin-left: 20px;
+      margin-right: 20px;
   }
-  
-  /* Left Section: Text */
+
   .textSection {
-    max-width: 500px;
-    text-align: left;
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
   }
-  
+
   .sectionTitle {
-    color: #a070ff;
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+      font-size: 16px;
   }
-  
+
   .sectionSubtitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.4;
+      font-size: 1.8rem;
   }
-  
-  .sectionSubtitle .highlight {
-    color: #a070ff;
-  }
-  
+
   .sectionDescription {
-    font-size: 16px;
-    margin-bottom: 30px;
-    color: #ccc;
+      font-size: 14px;
   }
-  
-  .learnMoreButton {
-    background-color: #a070ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .learnMoreButton:hover {
-    background-color: #8a5be3;
-    transform: translateY(-3px);
-  }
-  
-  .arrow {
-    font-size: 20px;
-  }
-  
-  /* Right Section: Cards */
+
   .cardsSection {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures cards adjust on smaller screens */
+      justify-content: center;
+      gap: 10px;
   }
-  
+
   .card {
-    background-color: #1e1b3a;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 220px; /* Fixed card width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 180px;
+      padding: 15px;
   }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+  .learnMoreButton {
+    font-size: 14px;
+    padding: 10px 15px;
+    align-self: center; /* Center the button horizontally */
+    margin-top: 20px; /* Add space above the button */
   }
-  
+}
+
+/* Very Small Devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .sectionSubtitle {
+      font-size: 1.5rem;
+  }
+
+  .learnMoreButton {
+      font-size: 12px;
+      padding: 8px 12px;
+  }
+
+  .card {
+      width: 160px;
+      padding: 10px;
+  }
+
   .cardIcon {
-    font-size: 50px;
-    color: #a070ff;
-    margin-bottom: 15px;
+      font-size: 40px;
   }
-  
-  .cardTitle {
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
+
+  .sectionDescription {
+      font-size: 12px;
   }
-  
+}
