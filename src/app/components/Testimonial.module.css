@@ -1,0 +1,110 @@
+/* Main Container */
+.testimonialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(3, 7, 28, 1);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Header Section */
+.headerSection {
+  margin-bottom: 40px;
+}
+
+.title {
+  color: #a070ff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.subtitle span {
+  color: #a070ff;
+}
+
+/* Cards Container */
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Individual Card */
+.card {
+  background-color: #1e1b3a;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Container */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userIcon {
+  font-size: 80px;
+  color: #a070ff;
+}
+
+/* Text Details */
+.userName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.userRole {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.userFeedback {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Scrolling Instruction */
+.scrollInstruction {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #a070ff;
+}
+
+.scrollText {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.scrollArrow {
+  font-size: 20px;
+}

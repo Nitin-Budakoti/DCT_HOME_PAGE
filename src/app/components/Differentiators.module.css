@@ -1,0 +1,83 @@
+/* Main Container */
+.container {
+    background-color: rgba(3, 7, 28, 1); 
+    margin: 0;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  /* Cards Container */
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #1e1b3a;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Icon Container */
+  .iconContainer {
+    background: linear-gradient(135deg, #a070ff, #6654ff);
+    border-radius: 50%;
+    padding: 15px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    font-size: 36px;
+    color: white;
+  }
+  
+  /* Card Title */
+  .cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Description */
+  .cardDescription {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .cardsContainer {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cardsContainer {
+      grid-template-columns: 1fr; /* 1 card per row for very small screens */
+    }
+  }
+  

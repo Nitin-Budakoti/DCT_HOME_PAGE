@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: space-evenly; /* Space between text and icons */
+  align-items: center; /* Align items vertically in the center */
+  background-color: #f4f4f4; /* Light purple or white background */
+  border-radius: 50px; /* Rounded edges for the container */
+  padding: 10px 20px; /* Spacing inside the container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 2px solid #6e38f5; /* Purple border */
+  margin-left: 90px; /* Increased margin from the left */
+  margin-right: 90px; /* Increased margin from the right */
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6e38f5; /* Purple color for the text */
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 900px;
+  gap: 20px; /* Spacing between icons */
+}
+
+.icon {
+  font-size: 1.5rem; /* Size of the icons */
+  color: #6e38f5; /* Purple color for the icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.icon:hover {
+  color: #a46ef9; /* Slightly lighter purple on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
