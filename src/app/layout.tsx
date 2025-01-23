@@ -19,13 +19,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: { pathname: string }; // Access params to check route
+}) {
+  const pathname = params.pathname; // Using params to get the pathname
+
+  let pageClass = "";
+  if (pathname === "/digitalTransformation") pageClass = "digital-transformation-page";
+  else if (pathname === "/digitalMarketing") pageClass = "digital-marketing-page";
+  else if (pathname === "/enterpriseSolutions") pageClass = "enterprise-solutions-page";
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${pageClass}`}
       >
         {children}
       </body>

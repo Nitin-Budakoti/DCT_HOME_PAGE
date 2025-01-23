@@ -3,6 +3,7 @@ import styles from "./AIServiceCard.module.css";
 import { FaChartBar, FaTools, FaBullhorn } from "react-icons/fa";
 import Link from "next/link"; // Import Link from Next.js
 
+
 const AIServiceCard: React.FC = () => {
   return (
     <div className={styles.serviceContainer}>
